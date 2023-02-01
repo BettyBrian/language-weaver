@@ -1,0 +1,41 @@
+{
+  "description": "Create a new JSON Object. You can set and add key-values.",
+  "label": "JSON Object Builder",
+  "category": "JSON",
+  "icon": {
+    "name": "ToolsIcon",
+    "color": "Green"
+  },
+  "options": [
+    {
+      "label": "Append to object",
+      "info": "Select an existing object here if you want to append to an existing object.",
+      "name": "appendObject",
+      "meta": {
+        "type": "JSON"
+      }
+    },
+    {
+      "name": "keyValue",
+      "info": "On the left hand, you can define keys. On the right hand, you can set the value.",
+      "label": "Key Value",
+      "meta": {
+        "type": "Map",
+        "validations": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "output",
+      "label": "AS",
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "JSON"
+        }
+      }
+    }
+  ],
+  "yields": "NONE"
+}
