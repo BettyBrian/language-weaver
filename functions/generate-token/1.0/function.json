@@ -1,0 +1,65 @@
+{
+  "description": "Generate a Bearer token to use for your API calls",
+  "label": "Generate Token",
+  "category": "Language weaver",
+  "icon": {
+    "name": "UserArrowInIcon",
+    "color": "Orange"
+  },
+  "options": [
+    {
+      "info": "Enter what protocol the receiving end needs to use. You can choose between HTTP and HTTPS, which one you should use depends on your host.",
+      "label": "Protocol",
+      "meta": {
+        "type": "Select",
+        "values": [
+          {
+            "label": "HTTP",
+            "value": "http"
+          },
+          {
+            "label": "HTTPS",
+            "value": "https"
+          }
+        ]
+      },
+      "name": "protocol"
+    },
+    {
+      "info": "Enter the URL of the API that you want to use.",
+      "label": "Url",
+      "meta": {
+        "type": "Text"
+      },
+      "name": "url"
+    },
+    {
+      "info": "Enter the client id of your orgnization.",
+      "label": "Client id",
+      "meta": {
+        "type": "Text"
+      },
+      "name": "clientId"
+    },
+    {
+      "info": "Enter the client secret of your organization.",
+      "label": "Client secret",
+      "meta": {
+        "type": "Text"
+      },
+      "name": "clientSecret"
+    },
+    {
+      "info": "The name of the variable you want for the result of you request",
+      "label": "As",
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "JSON"
+        }
+      },
+      "name": "as"
+    }
+  ],
+  "yields": "NONE"
+}

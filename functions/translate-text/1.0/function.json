@@ -1,6 +1,6 @@
 {
-  "description": "Uploads a file to Language weaver through a HTTP(S) request",
-  "label": "Translate Document",
+  "description": "Translates text with Language weaver through a HTTP(S) request",
+  "label": "Translate Text",
   "category": "Language Weaver",
   "icon": {
     "name": "GlobeIcon",
@@ -68,16 +68,16 @@
       "name": "headerInput"
     },
     {
-      "info": "The file you want to send to Language Weaver.",
-      "label": "File",
+      "info": "The text you want to send to Language Weaver.",
+      "label": "Text to translate",
       "meta": {
         "type": "Value",
-        "allowedKinds": ["FILE", "JSON"],
+        "allowedKinds": ["STRING"],
         "validations": {
           "required": true
         }
       },
-      "name": "buffer"
+      "name": "textFile"
     },
     {
       "info": "The Source language the file is currently in. This is three letters in total. E.g. ENG",
@@ -96,7 +96,7 @@
       "name": "targetLang"
     },
     {
-      "info": "The format of the file. This can be: PLAIN, XLINE, HTML, XML, SDLXML, TMX, XLIFF, BCM, PDF, RTF, DOCX, XLSX, PPTX, DOC, XLS, PPT, ODT, ODS, ODP, GIF, JPG, PNG, EML, MSG. More info about formats can be found at https://developers.languageweaver.com/api/lw/common/input-formats.html#input-formats",
+      "info": "The format of the file. This can be: HTML, PLAIN, XLINE, TMX, XLIFF, BCM, XML, SDLXML. More info about formats can be found at https://developers.languageweaver.com/api/lw/common/input-formats.html#input-formats",
       "label": "Input format",
       "meta": {
         "type": "Text"

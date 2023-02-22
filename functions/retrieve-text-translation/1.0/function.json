@@ -1,0 +1,39 @@
+{
+  "description": "Description",
+  "label": "Retrieve Text Translation",
+  "category": "Language weaver",
+  "icon": {
+    "name": "UploadIcon",
+    "color": "Blue"
+  },
+  "options": [
+    {
+      "info": "Sometimes you may need to pass some additional information in your request, this is possible by adding variables in your header.",
+      "label": "Headers",
+      "meta": {
+        "type": "Map"
+      },
+      "name": "headerInput"
+    },
+    {
+      "info": "Select the request id that has been given to you from the 'Translate text'or 'Translate document' action step.",
+      "label": "Request id",
+      "meta": {
+        "type": "Text"
+      },
+      "name": "requestId"
+    },
+    {
+      "info": "The name of the variable you want for the result of you request",
+      "label": "As",
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "JSON"
+        }
+      },
+      "name": "as"
+    }
+  ],
+  "yields": "NONE"
+}
