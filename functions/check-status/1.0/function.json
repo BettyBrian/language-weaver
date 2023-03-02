@@ -1,10 +1,10 @@
 {
   "description": "Description",
-  "label": "Retrieve Text Translation",
-  "category": "Language weaver",
+  "label": "Check Status",
+  "category": "Language Weaver",
   "icon": {
-    "name": "UploadIcon",
-    "color": "Blue"
+    "name": "ActionsIcon",
+    "color": "Orange"
   },
   "options": [
     {
@@ -16,8 +16,8 @@
       "name": "headerInput"
     },
     {
-      "info": "Select the request id that has been given to you from the 'Translate text'or 'Translate document' action step.",
-      "label": "Request id",
+      "info": "The request Id that you get given from your translate text or translate file result.",
+      "label": "Request Id",
       "meta": {
         "type": "Text"
       },
@@ -29,7 +29,7 @@
       "meta": {
         "type": "Output",
         "output": {
-          "type": "Text"
+          "type": "JSON"
         }
       },
       "name": "as"

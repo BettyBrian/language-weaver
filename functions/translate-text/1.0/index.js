@@ -25,11 +25,7 @@ const translateDocument = async ({
   const fetchUrl = generateUrl(url, protocol);
   const staticHeaders = {
     "Content-Type": "application/json",
-    // "Content-Length": "",
     Host: "api.languageweaver.com",
-    // Accept: "*/*",
-    // "Accept-Encoding": "gzip, deflate, br",
-    // Connection: "keep-alive",
   };
   const request = {
     method,
@@ -46,7 +42,7 @@ const translateDocument = async ({
       dictionaries: [],
     }),
   };
-  console.log("my request body is: ", request.body);
+
   const response = await fetch(fetchUrl, request);
   const data = await response.text();
 
