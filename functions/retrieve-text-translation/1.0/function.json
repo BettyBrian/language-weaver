@@ -24,6 +24,36 @@
       "name": "requestId"
     },
     {
+      "label": "Model",
+      "info": "Please select the model you want your translated file to be in.",
+      "meta": {
+        "type": "Model",
+        "validations": {
+          "required": true
+        }
+      },
+      "name": "selectedModel"
+    },
+    {
+      "label": "Property name",
+      "info": "Select what property is used to store the file in",
+      "meta": {
+        "allowedKinds": ["FILE", "IMAGE"],
+        "type": "Property",
+        "model": "selectedModel",
+        "validations": { "required": true }
+      },
+      "configuration": {
+        "dependsOn": [
+          {
+            "option": "selectedModel",
+            "action": "CLEAR"
+          }
+        ]
+      },
+      "name": "selectedProperty"
+    },
+    {
       "info": "The name of the variable you want for the result of you request",
       "label": "As",
       "meta": {

@@ -7,7 +7,12 @@ const parseHeaders = (headers, newValue) => {
   return headers;
 };
 
-const retrieveTextTranslation = async ({ headerInput, requestId }) => {
+const retrieveTextTranslation = async ({
+  headerInput,
+  requestId,
+  selectedModel,
+  selectedProperty,
+}) => {
   const staticHeaders = {
     Host: "api.languageweaver.com",
   };
@@ -29,19 +34,24 @@ const retrieveTextTranslation = async ({ headerInput, requestId }) => {
     console.log("My headers: ", headers);
     const fileBuffer = await response.blob();
     console.log("my file is: ", fileBuffer);
-    const fileRef = await storeFile(
-      "import",
-      "file",
-      {
-        contentType: headers["content-type"],
-        extension: "DOCX",
-        fileBuffer: fileBuffer.buffer,
-        fileName: headers["content-disposition"],
-      },
-      { headers: {} }
-    );
-    console.log("My temporary URL ", fileRef);
-    return { as: fileRef };
+    try {
+      const fileRef = await storeFile(
+        selectedModel.name,
+        selectedProperty[0].name,
+        {
+          contentType:
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          extension: "docx",
+          fileBuffer: fileBuffer.buffer,
+          fileName: headers["content-disposition"],
+        },
+        { headers: {} }
+      );
+      return { as: fileRef };
+    } catch (error) {
+      console.log("The error: ", error);
+      return error;
+    }
   }
 };
 
