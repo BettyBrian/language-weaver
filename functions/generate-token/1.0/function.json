@@ -34,7 +34,7 @@
       "name": "url"
     },
     {
-      "info": "Enter the client id of your orgnization.",
+      "info": "Enter the client id of your organisation.",
       "label": "Client id",
       "meta": {
         "type": "Text"
@@ -42,7 +42,7 @@
       "name": "clientId"
     },
     {
-      "info": "Enter the client secret of your organization.",
+      "info": "Enter the client secret of your organisation.",
       "label": "Client secret",
       "meta": {
         "type": "Text"
